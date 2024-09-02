@@ -1,0 +1,24 @@
+# Definición de la matriz 3x3
+matriz = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+
+# Valor a buscar
+valor_a_buscar = 5
+
+# Búsqueda del valor en la matriz
+encontrado = False
+for i in range(3):  # Recorrer filas
+    for j in range(3):  # Recorrer columnas
+        if matriz[i][j] == valor_a_buscar:
+            print(f"Valor {valor_a_buscar} encontrado en la posición: ({i}, {j})")
+            encontrado = True
+            break
+    if encontrado:
+        break
+# Si no se encontró el valor
+if not encontrado:
+    print(f"Valor {valor_a_buscar} no se encontró en la matriz.")
