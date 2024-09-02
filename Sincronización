@@ -1,0 +1,28 @@
+# Definición de la matriz 3x3
+matriz = [
+    [9, 2, 7],
+    [4, 6, 3],
+    [8, 1, 5]
+]
+
+# Función para ordenar una fila utilizando Bubble Sort
+def ordenar_fila(matriz, fila):
+    n = len(matriz[fila])
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if matriz[fila][j] > matriz[fila][j+1]:
+                # Intercambiar si el elemento es mayor que el siguiente
+                matriz[fila][j], matriz[fila][j+1] = matriz[fila][j+1], matriz[fila][j]
+
+# Mostrar la matriz original
+print("Matriz original:")
+for fila in matriz:
+    print(fila)
+
+# Ordenar la segunda fila (índice 1)
+ordenar_fila(matriz, 1)
+
+# Mostrar la matriz con la fila ordenada
+print("\nMatriz con la segunda fila ordenada:")
+for fila in matriz:
+    print(fila)
